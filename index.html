@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/images/favicon.ico" sizes="16x16">
+    <!-- <link rel="stylesheet" href="./assets/CSSandJS/themify-icons.css"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/CSSandJS/main.css">
+    <title>Tran Quang Long</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="header-nav-bar">
+            <ul class="menu click-sound-effect">
+                <li class="menu-items" style="--social-color: var(--facebook-color);">
+                    <a href="#" class="menu-item-link">Facebook</ion-icon></a>
+                </li>
+
+                <li class="menu-items" style="--social-color: var(--twitter-color);">
+                    <a href="#" class="menu-item-link">Twitter</a>
+                </li>
+
+                <li class="menu-items" style="--social-color: var(--instagram-color);">
+                    <a href="#" class="menu-item-link">Instagram</a>
+                </li>
+
+                <li class="menu-items" style="--social-color: var(--github-color);">
+                    <a href="#" class="menu-item-link">GitHub</a>
+                </li>
+
+                <li class="menu-items" style="--social-color: var(--youtube-color);">
+                    <a href="#" class="menu-item-link">Youtube</a>
+                </li>
+
+                <li class="menu-items" style="--social-color: lawngreen;" onclick="resetColorandMessages()">
+                    <a href="#" class="menu-item-link">Reset</a>
+                </li>
+            </ul>
+
+
+            <div class="right">
+                <div class="open-command-form btn-effect click-sound-effect"><i class="fas fa-terminal"></i></div>
+
+                <div class="command ">
+                    <div class="command-form">
+                        <div class="command-tab">
+                            <div class="main-command">
+                                <div class="command-body">
+                                    <div class="close-command-form btn-effect click-sound-effect">&times;</div>
+                                    <div class="heading">Command</div>
+
+                                    <div class="command-form-value">
+                                        <div class="fal fa-angle-right command-icon"></div>
+                                        <input type="text" class="command-input enter-input" autocomplete="off">
+                                        <div class="border-command"></div>
+                                        <div class="border-password"></div>
+                                        <span class="clear-command click-sound-effect">&times;</span>
+                                        <div class="fal fa-key password-icon"></div>
+                                        <input type="password" required class="password enter-input" autocomplete="on"
+                                            name="admin">
+                                        <div class="remember">
+                                            <label for="remember-command" class="remember-command-label">Remember
+                                                command</label>
+                                            <input type="checkbox" id="remember-command" checked>
+                                        </div>
+                                        <i class="fal fa-eye-slash pass icon-effect click-sound-effect"></i>
+                                        <i class="fal fa-eye pass icon-effect click-sound-effect"
+                                            style="display: none;"></i>
+                                        <input type="submit" value="Submit"
+                                            class="submit-command enter-input btn-effect click-sound-effect" required
+                                            onclick="activeCommand()">
+                                    </div>
+                                </div>
+                                <div class="show-all-command-body">
+                                    <ion-icon name="arrow-back-outline" class="back-to-normal-command btn-effect">
+                                    </ion-icon>
+                                    <div class="close-show-all-command btn-effect">&times;</div>
+                                    <h1 class="heading">Show All</h1>
+                                    <ol class="content-command" type="I">
+                                        <li class="content-command-items" onclick="turnOnLight()"
+                                            title="Make colored buttons.">
+                                            Turn on light: Make colored buttons.
+                                        </li>
+
+                                        <li class="content-command-items" onclick="turnOffLight()"
+                                            title="Make the buttons lose their color.">
+                                            Turn off light: Make the buttons lose their color.
+                                        </li>
+
+                                        <li class="content-command-items" onclick="turnOnSwitch()"
+                                            title="Make buttons change color over time.">
+                                            Turn on switch: Make buttons change color over time.
+                                        </li>
+
+                                        <li class="content-command-items" onclick="turnOffSwitch()"
+                                            title="Disable buttons that change color over time.">
+                                            Turn off switch: Disable buttons that change color over time.
+                                        </li>
+
+                                        <li class="content-command-items" onclick="turnOnMessages()"
+                                            title="Make all messages appear.">
+                                            Turn on messages: Make all messages appear.
+                                        </li>
+
+                                        <li class="content-command-items" onclick="turnOffMessages()"
+                                            title="Make all messages disappear.">
+                                            Turn off messages: Make all messages disappear.
+                                        </li>
+
+                                        <li class="content-command-items" onclick="turnOnAll()"
+                                            title="Make it all appear.">
+                                            Turn on all: Make it all appear.
+                                        </li>
+
+                                        <li class="content-command-items" onclick="turnOffAll()"
+                                            title="Make it all disappear.">
+                                            Turn off all: Make it all disappear.
+                                        </li>
+
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="open-coin-form btn-effect click-sound-effect">
+                    <input type="text" class="input-coin-out" readonly value="10">
+                    <div class="infinite-coin"><span class="ti-infinite"></span></div>
+                    <i class="fas fa-coins"></i>
+                </div>
+                <form class="coin" action="#">
+                    <div class="coin-form">
+                        <div class="coin-body">
+                            <div class="close-coin-form btn-effect click-sound-effect">&times;</div>
+                            <div class="heading">Coin</div>
+                            <div id="consumption">
+                                <input type="text" value="2" class="consumption">
+                                <div class="consumption-door"></div>
+                                <div class="consumption-submit">
+                                    <div class="consumption-submit-icon">&#8594;</div>
+                                    <div class="consumption-submit-btn fas fa-coin"></div>
+                                </div>
+                            </div>
+                            <input type="text" class="input-coin-in">
+                            <div class="border-input-coin-in-1"></div>
+                            <div class="border-input-coin-in-2"></div>
+                            <div class="placeholder-input-coin">Enter Value</div>
+                            <input type="text" readonly class="estimate" value="0:00">
+                            <span class="estimate-pseudo-before">:</span>
+                            <div class="coin-range">
+                                <div class="coin-range-bar">
+                                    <div class="coin-range-circle">
+                                        <span class="around">
+                                            <span class="origin"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="coin-range-bar-predict">
+                                    <!-- <div class="coin-range-circle"></div> -->
+                                </div>
+                                <button type="submit" class="enter-coin btn-effect click-sound-effect">Enter</button>
+                            </div>
+                        </div>
+
+                        <div class="rotation-luck">
+                            <div class="rotation-luck-close">&times;</div>
+                            <div class="rotation-luck-heading">Rotation Luck</div>
+                            <div class="rotation-output"></div>
+                            <div class="rotation-main">
+                                <div class="rotation-main-2">
+                                    <div class="rotation-0 prize">Good luck</div>
+                                    <div class="rotation-1 prize">1</div>
+                                    <div class="rotation-2 prize">2</div>
+                                    <div class="rotation-3 prize">3</div>
+                                    <div class="rotation-5 prize">5</div>
+                                    <div class="rotation-10 prize">10</div>
+                                    <div class="rotation-20 prize">20</div>
+                                    <div class="rotation-plus prize">More</div>
+                                </div>
+                            </div>
+                            <div class="rotation-enter">Start</div>
+                        </div>
+                </form>
+            </div>
+
+        </nav>
+
+        <div class="animate">
+            <div class="animate-text" title="Hold 2s to open form">TRAN QUANG LONG</div>
+            <div class="form-color">
+                <div class="form-color-body">
+                    <span class="close-form-color">&times;</span>
+                    <h1 class="heading">Set color</h1>
+                    <input type="range" class="color-range" min="-3" max="3" value="0">
+                    <div class="animate-btn btn-effect">
+                        <span>Click to change the text color</span>
+                        <div class="light">
+                            <div class="wire"></div>
+                            <div class="bulb">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-tooltip">
+            <div class="btns btn-tooltip-item click-sound-effect">
+                <a class="icons" style="--social-color: var(--facebook-color);" tooltip="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+
+            <div class="btns btn-tooltip-item click-sound-effect">
+                <a class="icons" style="--social-color: var(--twitter-color);" tooltip="Twitter">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </div>
+
+            <div class="btns btn-tooltip-item instagram click-sound-effect">
+                <a class="icons" style="--social-color: var(--instagram-color);" tooltip="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <div class="btns btn-tooltip-item click-sound-effect">
+                <a class="icons" style="--social-color: var(--github-color);" tooltip="Github">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </div>
+
+            <div class="btns btn-tooltip-item click-sound-effect">
+                <a class="icons" style="--social-color: var(--youtube-color);" tooltip="Youtube">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+            </div>
+        </div>
+
+        <div class="message">
+            <div class="messages " style="--pos: calc(10%);--social-color: var(--facebook-color);">
+                <span class="icons"><i class="fab fa-facebook-f"></i></i></span>
+                <div class="message-body">
+                    <h2 class="heading">Facebook</h2>
+                    <span class="description">Lorem ipsum dolor sit amet consectetur.</span>
+                </div>
+                <div class="close-message">
+                    <span class="close">&times;</span>
+                </div>
+            </div>
+
+            <div class="messages " style="--pos: calc(10% + (120px));--social-color: var(--twitter-color);">
+                <span class="icons">
+                    <ion-icon name="logo-twitter"></ion-icon></i>
+                </span>
+                <div class="message-body">
+                    <h2 class="heading">Twitter</h2>
+                    <span class="description">Lorem ipsum dolor sit amet consectetur.</span>
+                </div>
+                <div class="close-message">
+                    <span class="close">&times;</span>
+                </div>
+            </div>
+
+            <div class="messages " style="--pos: calc(10% + (120px*2));--social-color: var(--instagram-color);">
+                <span class="icons"><i class="fab fa-instagram"></i></span>
+                <div class="message-body">
+                    <h2 class="heading">Instagram</h2>
+                    <span class="description">Lorem ipsum dolor sit amet consectetur.</span>
+                </div>
+                <div class="close-message">
+                    <span class="close">&times;</span>
+                </div>
+            </div>
+
+            <div class="messages " style="--pos: calc(10% + (120px*3));--social-color: var(--github-color);">
+                <span class="icons"><i class="fab fa-github"></i></span>
+                <div class="message-body">
+                    <h2 class="heading">Github</h2>
+                    <span class="description">Lorem ipsum dolor sit amet consectetur.</span>
+                </div>
+                <div class="close-message ">
+                    <span class="close">&times;</span>
+                </div>
+            </div>
+
+            <div class="messages" style="--pos: calc(10% + (120px*4));--social-color: var(--youtube-color);">
+                <span class="icons">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </span>
+                <div class="message-body">
+                    <h2 class="heading">Youtube</h2>
+                    <span class="description">Lorem ipsum dolor sit amet consectetur.</span>
+                </div>
+                <div class="close-message">
+                    <span class="close">&times;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-menu" style="display: none;">
+            <div class="main-menu__open-btn click-sound-effect btn-effect">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </div>
+            <div class="main-menu__surface"></div>
+            <div class="main-menu__dashboard">
+                <div class="main-menu__dashboard-menu-1 click-sound-effect btn-effect">
+                    <div class="bar-1 bars"></div>
+                    <div class="bar-2 bars"></div>
+                    <div class="bar-3 bars"></div>
+                    <div class="main-menu__dashboard-menu-1-item" style="--social-color: var(--facebook-color);">
+                        <a href="#" class="main-menu__dashboard-menu-1-item-link menu-item-icon" style="--angle: 0;"><i
+                                class="fab fa-facebook-f"></i></i></a>
+                    </div>
+                    <div class="main-menu__dashboard-menu-1-item" style="--social-color: var(--twitter-color);">
+                        <a href="#" class="main-menu__dashboard-menu-1-item-link menu-item-icon" style="--angle: 1;">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="main-menu__dashboard-menu-1-item" style="--social-color: var(--instagram-color);">
+                        <a href="#" class="main-menu__dashboard-menu-1-item-link menu-item-icon" style="--angle: 2;">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="main-menu__dashboard-menu-1-item" style="--social-color: var(--github-color);">
+                        <a href="#" class="main-menu__dashboard-menu-1-item-link menu-item-icon" style="--angle: 3;">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="main-menu__dashboard-menu-1-item" style="--social-color: var(--youtube-color);">
+                        <a href="#" class="main-menu__dashboard-menu-1-item-link menu-item-icon" style="--angle: 4;">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="main-menu__dashboard-menu-1-item" style="--social-color: #47C355;">
+                        <a href="#" class="main-menu__dashboard-menu-1-item-link menu-item-icon" style="--angle: 5;">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="main-menu__dashboard-menu-1-item" style="--social-color: #5D29CB;">
+                        <a href="#" class="main-menu__dashboard-menu-1-item-link menu-item-icon" style="--angle: 6;">
+                            <ion-icon name="logo-yahoo"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="main-menu__dashboard-menu-1-item" style="--social-color: #26A0DC;">
+                        <a href="#" class="main-menu__dashboard-menu-1-item-link menu-item-icon" style="--angle: 7;"><i
+                                class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="main-menu__dashboard-menu2 click-sound-effect btn-effect">
+                    <div class="main-menu__dashboard-menu2-button"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="zodiac">
+            <div class="zodiac__form">
+                <div class="zodiac__form-body">
+                    <div class="zodiac__form-body-close click-sound-effect btn-effect">&times;</div>
+                    <div class="zodiac__form-body-heading">Zodiac</div>
+                    <div class="zodiac__form-body-choosedate">
+                        <div id="left">
+                            <div class="zodiac__form-body-choosedate-month click-sound-effect btn-effect" id="month">
+                                <div class="zodiac__form-body-choosedate-month-text">Month</div>
+                                <div class="zodiac__form-body-choosedate-month-icon">
+                                    <ion-icon name="chevron-down-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <ul class="zodiac__form-body-choosedate-option">
+                                <li class="zodiac__form-body-choosedate-option-item" value="1">January</li>
+                                <li class="zodiac__form-body-choosedate-option-item" value="2">February</li>
+                                <li class="zodiac__form-body-choosedate-option-item" value="3">March</li>
+                                <li class="zodiac__form-body-choosedate-option-item" value="4">April</li>
+                                <li class="zodiac__form-body-choosedate-option-item" value="5">May</li>
+                                <li class="zodiac__form-body-choosedate-option-item" value="6">June</li>
+                                <li class="zodiac__form-body-choosedate-option-item" value="7">July</li>
+                                <li class="zodiac__form-body-choosedate-option-item" value="8">August</li>
+                                <li class="zodiac__form-body-choosedate-option-item" value="9">September</li>
+                                <li class="zodiac__form-body-choosedate-option-item" value="10">October</li>
+                                <li class="zodiac__form-body-choosedate-option-item" value="11">November</li>
+                                <li class="zodiac__form-body-choosedate-option-item" value="12">December</li>
+                            </ul>
+                        </div>
+
+                        <div id="right">
+                            <div class="zodiac__form-body-choosedate-month click-sound-effect btn-effect" id="date">
+                                <div class="zodiac__form-body-choosedate-month-text"
+                                    id="zodiac__form-body-choosedate-date-text">Date</div>
+                                <div class="zodiac__form-body-choosedate-month-icon">
+                                    <ion-icon name="chevron-down-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <li value="1" class="date">1</li>
+                                    </td>
+                                    <td>
+                                        <li value="2" class="date">2</li>
+                                    </td>
+                                    <td>
+                                        <li value="3" class="date">3</li>
+                                    </td>
+                                    <td>
+                                        <li value="4" class="date">4</li>
+                                    </td>
+                                    <td>
+                                        <li value="5" class="date">5</li>
+                                    </td>
+                                    <td>
+                                        <li value="6" class="date">6</li>
+                                    </td>
+                                    <td>
+                                        <li value="7" class="date">7</li>
+                                    </td>
+                                    <td>
+                                        <li value="8" class="date">8</li>
+                                    </td>
+                                    <td>
+                                        <li value="9" class="date">9</li>
+                                    </td>
+                                    <td>
+                                        <li value="10" class="date">10</li>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <li value="11" class="date">11</li>
+                                    </td>
+                                    <td>
+                                        <li value="12" class="date">12</li>
+                                    </td>
+                                    <td>
+                                        <li value="13" class="date">13</li>
+                                    </td>
+                                    <td>
+                                        <li value="14" class="date">14</li>
+                                    </td>
+                                    <td>
+                                        <li value="15" class="date">15</li>
+                                    </td>
+                                    <td>
+                                        <li value="16" class="date">16</li>
+                                    </td>
+                                    <td>
+                                        <li value="17" class="date">17</li>
+                                    </td>
+                                    <td>
+                                        <li value="18" class="date">18</li>
+                                    </td>
+                                    <td>
+                                        <li value="19" class="date">19</li>
+                                    </td>
+                                    <td>
+                                        <li value="20" class="date">20</li>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <li value="21" class="date">21</li>
+                                    </td>
+                                    <td>
+                                        <li value="22" class="date">22</li>
+                                    </td>
+                                    <td>
+                                        <li value="23" class="date">23</li>
+                                    </td>
+                                    <td>
+                                        <li value="24" class="date">24</li>
+                                    </td>
+                                    <td>
+                                        <li value="25" class="date">25</li>
+                                    </td>
+                                    <td>
+                                        <li value="26" class="date">26</li>
+                                    </td>
+                                    <td>
+                                        <li value="27" class="date">27</li>
+                                    </td>
+                                    <td>
+                                        <li value="28" class="date">28</li>
+                                    </td>
+                                    <td>
+                                        <li value="29" class="date">29</li>
+                                    </td>
+                                    <td>
+                                        <li value="30" class="date">30</li>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <li value="31" class="date">31</li>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="zodiac__form-body-submit click-sound-effect btn-effect">View Result</div>
+                </div>
+
+                <div class="zodiac__form-display">
+                    <div class="zodiac__form-display-close">&times;</div>
+                    <div class="zodiac__display-img"></div>
+                    <div class="zodiac__form-display-text">
+                        <h3 class="zodiac__form-display-text-heading">Taurus</h3>
+                        <div class="zodiac__form-display-text-desc">(Cung Kim Ngưu - 21/4 - 21/5)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="volume">
+            <div class="volume-range">
+                <div class="volume-range-bar">
+                    <div class="volume-range-circle"></div>
+                </div>
+            </div>
+            <div class="mute-form">
+                <ion-icon name="volume-high-outline" onclick="mute()" class="mute"></ion-icon>
+                <ion-icon name="volume-mute-outline" onclick="unmute()" class="unmute"></ion-icon>
+            </div>
+        </div>
+
+        <div class="error-message">
+            <div class="error-message__heading">Trần Quang Long cho biết</div>
+            <div class="error-message__desc"></div>
+            <div class="error-message__close"><span>OK</span></div>
+        </div>
+    </div>
+    <!--wrapper-->
+    <!-- </div> -->
+
+    <!-- <form action="http://localhost/PHP/main.php" id="test" style="position: absolute; left: 40%;" method="post"
+        target="_self">
+        <input type="text" name="username" id="username">
+        <br>
+        <input type="password" name="password" id="password">
+        <br>
+        <input type="checkbox" checked id="" name="checkbox">
+        <br>
+        <input type="hidden" name="redirect_to" value="http://127.0.0.1:5500/myweb/index.html">
+
+        <input type="submit" value="Submit" name="submit">
+        <script>
+            const username = document.getElementById('username');
+            const pass_word = document.getElementById('password');
+            document.getElementById('test').onsubmit = function (e) {
+                e.preventDefault
+            }
+        </script>
+    </form> -->
+
+    <div class="audio">
+        <audio src="./assets/sounds/coins-in-hand-5.wav" class="coin-sound set-volume"></audio>
+        <audio src="./assets/sounds/Ting-sound-effect.mp3" class="ting-sound set-volume"></audio>
+        <audio src="./assets/sounds/click-sounds.wav" class="click-sound set-volume"></audio>
+        <audio src="./assets/sounds/success.wav" class="success-sound set-volume"></audio>
+        <audio class="error-sound set-volume">
+            <source src="./assets/sounds/erro.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/CSSandJS/main.js"></script>
+
+</html>
